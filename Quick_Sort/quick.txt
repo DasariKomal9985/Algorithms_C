@@ -1,0 +1,23 @@
+A divide-and-conquer algorithm using a pivot. Rearranges elements so smaller numbers go left and larger go right.
+
+How it works (logic)
+
+Choose pivot (e.g., last element).
+
+Partition:
+
+All elements < pivot → left
+
+All elements > pivot → right
+
+Recursively sort left and right partitions.
+
+Complexity
+
+Average: O(n log n)
+
+Worst: O(n²) (if pivot chosen badly)
+
+Space: O(log n)
+
+Use when: Extremely fast in practice, most used.

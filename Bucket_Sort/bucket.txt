@@ -1,0 +1,19 @@
+Distributes elements into multiple “buckets,” sorts each bucket, and then joins them.
+
+How it works (logic)
+
+Create k buckets (like bins).
+
+Put each element into a bucket based on its value range.
+
+Sort each bucket (can use insertion sort).
+
+Concatenate buckets.
+
+Complexity
+
+Average: O(n)
+
+Worst: O(n²)
+
+Use when: Inputs are uniformly distributed (like 0–1 floats)

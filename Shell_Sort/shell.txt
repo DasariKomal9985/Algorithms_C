@@ -1,0 +1,21 @@
+Improves insertion sort by allowing big jumps (gaps). As gap reduces to 1 → becomes normal insertion sort.
+
+How it works (logic)
+
+Choose a gap (e.g., n/2).
+
+Perform gapped insertion sort.
+
+Reduce gap (e.g., gap = gap/2).
+
+Finish with gap = 1.
+
+Complexity
+
+Time: depends on gap sequence
+
+Worst: O(n²)
+
+Best: ~O(n^(3/2)) or sometimes O(n log² n)
+
+Use when: Faster than basic sorts for medium-sized arrays.

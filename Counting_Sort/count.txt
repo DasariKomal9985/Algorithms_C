@@ -1,0 +1,17 @@
+Non-comparison sort. Works by counting how many times each value appears.
+
+How it works (logic)
+
+Create a frequency array for all values.
+
+Compute prefix sums (cumulative count).
+
+Place elements in output array based on counts.
+
+Complexity
+
+Time: O(n + k), where k = range of numbers
+
+Space: O(k)
+
+Use when: Numbers are in a small range (e.g., 0–1000).

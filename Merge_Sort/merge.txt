@@ -1,0 +1,19 @@
+A divide-and-conquer algorithm that splits the array into halves, sorts each half, then merges them.
+
+How it works (logic)
+
+Divide array into 2 halves recursively.
+
+Sort left half.
+
+Sort right half.
+
+Merge the two sorted halves into one sorted array.
+
+Complexity
+
+Time: O(n log n)
+
+Space: O(n)
+
+Use when: Stable sorting required, or linked lists.

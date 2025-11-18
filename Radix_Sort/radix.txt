@@ -1,0 +1,17 @@
+Sorts numbers digit by digit (units → tens → hundreds), usually using Counting Sort as a subroutine.
+
+How it works (logic)
+
+Sort numbers by least significant digit using stable sort.
+
+Move to next digit.
+
+Repeat until highest digit is processed.
+
+Complexity
+
+Time: O(d * (n + k))
+
+Space: O(n + k)
+
+Use when: Large numbers, but range of digits is small.
