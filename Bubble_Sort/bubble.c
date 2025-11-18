@@ -2,6 +2,8 @@
 #include <stdlib.h>
 void Ascending_Bubble_Sort(int arr[], int size)
 {
+    int flag = 0;
+    int cycle = 0;
     printf("Given array:\n");
     printf("=================================================================================\n");
     for (int i = 0; i < size; i++)
@@ -12,6 +14,8 @@ void Ascending_Bubble_Sort(int arr[], int size)
     printf("=================================================================================\n");
     for (int i = 0; i < size - 1; i++)
     {
+        flag = 0;
+        cycle++;
         for (int j = 0; j < size - i - 1; j++)
         {
             if (arr[j] > arr[j + 1])
@@ -19,22 +23,30 @@ void Ascending_Bubble_Sort(int arr[], int size)
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
+                flag = 1;
             }
+        }
+        if (flag == 0)
+        {
+            break;
         }
     }
     printf("Sorted array in Ascending order:\n");
     printf("=================================================================================\n");
     for (int i = 0; i < size; i++)
     {
-        printf("%d ", arr[i]);
+        printf("%d\t", arr[i]);
     }
     printf("\n");
+    printf("Number of cycles: %d\n", cycle);
     printf("=================================================================================\n");
 }
 
 
 void Descending_Bubble_Sort(int arr[], int size)
 {
+    int flag = 0;
+    int cycle = 0;
     printf("Given array:\n");
     printf("=================================================================================\n");
     for (int i = 0; i < size; i++)
@@ -45,6 +57,8 @@ void Descending_Bubble_Sort(int arr[], int size)
     printf("=================================================================================\n");
     for (int i = 0; i < size - 1; i++)
     {
+        flag = 0;
+        cycle++;
         for (int j = 0; j < size - i - 1; j++)
         {
             if (arr[j] < arr[j + 1])
@@ -52,16 +66,22 @@ void Descending_Bubble_Sort(int arr[], int size)
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
+                flag = 1;
             }
+        }
+        if (flag == 0)
+        {
+            break;
         }
     }
     printf("Sorted array in Descending order:\n");
     printf("=================================================================================\n");
     for (int i = 0; i < size; i++)
     {
-        printf("%d ", arr[i]);
+        printf("%d\t", arr[i]);
     }
     printf("\n");
+    printf("Number of cycles: %d\n", cycle);
     printf("=================================================================================\n");
 }
 
