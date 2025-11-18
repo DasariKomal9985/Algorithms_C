@@ -1,9 +1,19 @@
 Binary Search is a fast searching algorithm used on sorted arrays.
 It repeatedly divides the search space into half until the element is found.
 
+
+
+
+
 This is one of the most important algorithms in DSA.
 
+
+
+
 How it works (logic)
+
+
+
 
 Take two pointers:
 
@@ -27,9 +37,19 @@ If arr[mid] > key → search in left half
 
 Repeat steps 2–3 until low > high.
 
+
+
+
+
+
+
 Complexity
 
 Time: O(log n)
+
+
+
+
 
 Space:
 
