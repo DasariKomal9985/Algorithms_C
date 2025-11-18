@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <stdlib.h>
+void Ascending_Bubble_Sort(int arr[], int size)
+{
+    printf("Given array:\n");
+    printf("=================================================================================\n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    printf("=================================================================================\n");
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    printf("Sorted array in Ascending order:\n");
+    printf("=================================================================================\n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    printf("=================================================================================\n");
+}
+
+
+void Descending_Bubble_Sort(int arr[], int size)
+{
+    printf("Given array:\n");
+    printf("=================================================================================\n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    printf("=================================================================================\n");
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - i - 1; j++)
+        {
+            if (arr[j] < arr[j + 1])
+            {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    printf("Sorted array in Descending order:\n");
+    printf("=================================================================================\n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    printf("=================================================================================\n");
+}
+
+
+int main()
+{
+    int size, choise;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+    int arr[size];
+    printf("Enter %d elements:\n", size);
+    for (int i = 0; i < size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    printf("Enter Choise\n\n 1.)Ascending\n 2.)Descending\n 3.)Exit:\n ");
+    scanf("%d", &choise);
+    switch (choise)
+    {
+    case 1:
+        Ascending_Bubble_Sort(arr, size);
+        break;
+    case 2:
+        Descending_Bubble_Sort(arr, size);
+        break;
+    case 3:
+        exit(0);
+        break;
+    default:
+        printf("Invalid Choise\n");
+        break;
+    }
+}
