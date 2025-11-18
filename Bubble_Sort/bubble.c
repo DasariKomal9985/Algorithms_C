@@ -1,3 +1,29 @@
+/* 
+
+A simple comparison-based algorithm. It repeatedly compares adjacent elements and swaps them if they are in the wrong order.
+
+How it works (logic)
+
+Compare arr[i] and arr[i+1].
+
+If left > right → swap.
+
+After each full pass, the largest element “bubbles” to the end.
+
+Repeat until no swaps happen.
+
+Complexity
+
+Time: O(n²)
+
+Space: O(1)
+
+
+*/
+
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 void Ascending_Bubble_Sort(int arr[], int size)
