@@ -12,6 +12,46 @@ Complexity
 Time: O(n²)
 
 Space: O(1)
+
+
+
+void Swap(int *a, int *b)
+{
+    // Swap two integer values using a temporary variable
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void SelectionSort(int arr[], int size)
+{
+    // Outer loop → selects the boundary of the unsorted part
+    for (int i = 0; i < size - 1; i++)
+    {
+        // Assume current index i has the minimum element
+        int min = i;
+
+        // Inner loop → find the actual minimum element in the remaining array
+        for (int j = i + 1; j < size; j++)
+        {
+            // If a smaller element is found, update "min"
+            if (arr[j] < arr[min])
+            {
+                min = j;
+            }
+        }
+
+        // If the minimum position is not the current i, swap them
+        if (min != i)
+        {
+            Swap(&arr[i], &arr[min]);
+        }
+        // After this point, arr[i] is in its correct sorted position
+    }
+}
+
+
+
 */
 
 
